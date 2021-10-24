@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en" style="background: #EDEEF3; padding: 0 24px;">
+<head>
+  <meta name="description" content="..." >
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+    :root {
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    * {
+
+      box-sizing: border-box;
+      line-height: 1;
+
+    }
+
+  </style>
+
+</head>
+<body style="margin: auto; margin-top: 60px; max-width: 1046px;">
+
+  <column- style="display: flex; flex-flow: column nowrap;">
+
+    <row- style="display: flex; flex-flow: row nowrap; align-items: center;">
+    
+      <avatar- style="
+      background: center / cover no-repeat url(/img/chameleon.jpg);
+      min-width: 36px; width: 36px; height: 36px; border-radius: 50%;"></avatar->
+
+      <s- style="min-width: 16px; width: 16px"></s->
+
+      <notifications- style="
+      font-size: 12px;
+      padding: 4px 8px; border-radius: calc( .5em + 4px ); 
+      background: #D8DEE7; color: #393939; 
+      white-space: pre;" value="3"> <style>
+
+        notifications-::after {
+
+          content: attr( value );  
+
+        }
+      
+      </style><img alt="bell" style="margin-right: 4px; height: 1em; width: 1em; " src="svg/bell.svg"/></notifications->
+
+      <s- style="flex-grow: 1; min-width: 16px;"></s->
+
+      <search- style="
+      width: min( 694px, 100% );
+      padding: 8px; border-radius: calc( .5em + 8px );
+      color: #393939;
+      font-size: 17px"><style>
+
+        @media screen and (min-width: 428px) { 
+          
+          search- {
+
+          background: #D8DFE9;
+
+          } 
+        
+          search- p { 
+            
+            display: none; 
+            visibility: hidden;
+          
+          }
+        
+        }
+
+        @media screen and (max-width: 428px ) { search- {
+
+          background-color: transparent;
+
+        } }
+
+      </style>
+      
+      <icon- style="display: inline-block; 
+      width: 20px; height: 20px; 
+      font-size: 17px; text-align: center;">
+        <img alt="search" style="margin-right: 4px; height: 1em; width: 1em; " src="svg/glass.svg"/>
+      </icon->
+
+      <s- style="width: 10px"></s->
+        <style>
+          .search-para {
+            display: none;
+          }
+          @media screen and (min-width: 428px ) { .search-para {
+            display: inline;
+          }}
+        </style>
+      <p class="search-para" style="all:unset;">Search</p>
+      </search->
+
+    </row->
+
+    <grid- style="display: grid; gap: 0 20px"><style>
+
+      @media screen and (min-width: 428px ) { grid- {
+    
+        margin-top: 91px;
+        grid: 
+          'summary    job-list' calc( 73px + 264px )
+          'task-list  job-list' auto
+          / 1fr 1fr;
+    
+      } }
+
+      @media screen and (max-width: 428px ) { grid- {
+
+        margin-top: -22px;
+        grid: 
+          'summary  ' min-content
+          'task-list' min-content
+          'job-list'  auto
+          / 1fr;
+
+      } }
+
+    </style>
+
+      <summary- style="
+      grid-area: summary; place-self: start;
+      height: 264px;
+      background: transparent radial-gradient(closest-side at 50% 50%, #7EA8D3 0%, #FFFFFF00 100%) 0% 0% no-repeat padding-box;
+      display: flex; flex-flow: column nowrap;
+      align-items: center;
+      margin: auto;width: 264px;">
+
+        <s- style="height: 94px"></s->
+
+        <hour-balance style="
+        font-size: 40px; text-align: center; color: #000000;" >8.9</hour-balance>
+
+        <s- style="height: 8px"></s->
+
+        <h1 style="all: unset; color: #000000; font-size: 17px;">Hour Balance</h1>
+
+        <s- style="height: 33px;"></s->
+
+        <button- style="
+        background: #C5C6CE2F;
+        padding: 12px 16px; border-radius: 24px;
+        display: flex; flex-flow: row nowrap;" >
+
+          <p style="all: unset; color: #000000; font-size: 17px;" >Activity</p>
+
+          <s- style="width: 16px;"></s->
+
+          <icon- style="
+          background: #BDC4D3; text-align: center;
+          width: 24px; height: 24px;
+          padding: 4px; border-radius: 12px;">
+            <img alt="arrow" style="margin-right: 4px; height: 1em; width: 1em; " src="svg/chevron.svg"/>
+          </icon->
+
+        </button->
+
+      </summary->
+
+      <task-list style="grid-area: task-list; place-self: start;
+      /* margin-top: 73px; */
+      display: flex; " ><style>
+
+        @media screen and (min-width: 428px ) {
+          task-list {
+            flex-flow: column nowrap;
+            width: 100%;
+          }
+          task-list * {
+          }
+        }
+
+        @media screen and (max-width: 428px ) { task-list {
+
+          flex-flow: row nowrap;
+
+        } }
+
+      </style>
+        
+        <style>
+
+          @media screen and (min-width: 428px ) { 
+          
+            task- + task- {
+
+              margin-top: 20px;
+
+            }
+          
+          }
+
+          @media screen and (max-width: 428px ) { 
+
+            task- + task- {
+
+              margin-left: 20px; 
+
+            }
+
+          }
+
+        </style>
+        
+        <task->
+          <h1 slot=title>Tasks</h1>
+        </task->
+        <task->
+          <h1 slot=title>Requests</h1>
+        </task->
+
+      </task-list>
+
+      <job-list style="grid-area: job-list; place-self: start end; height: max-content; width: 100%;">
+
+        <column- style="display: flex; flex-flow: column nowrap;">
+      
+          <row- style="display: flex; flex-flow: row nowrap; justify-content: space-between;" >
+        
+            <h1 style="all: unset; font-size: 17px; color: #000000; font-weight: bold;">Popular Jobs at</h1>
+
+            <p style="all: unset; font-size: 17px; color: #2B49AD; font-weight: bold; display: flex;
+              align-items: center; padding: 4px;">
+              <img alt="location" style="margin-right: 4px; height: 1em; width: 1em; " src="svg/location.svg"/>
+              N2L 4B7
+            </p>
+        
+          </row->
+
+          <s- style="height: 12px"></s->
+
+          <column- style="flex-grow: 1; height: max-content;
+          display: flex; flex-flow: column nowrap;">
+
+            <style>
+
+
+              job- + job- {
+
+                margin-top: 8px
+
+              }
+
+            </style>
+        
+            <job-></job->
+            <job-></job->
+            <job-></job->
+            <job-></job->
+            <job-></job->
+            <job-></job->
+            <job-></job->
+            <job-></job->
+            <job-></job->
+            <job-></job->
+            <job-></job->            
+
+        
+          </column->
+      
+        </column->
+
+      </job-list>
+  
+    </grid->
+
+    <s- style="height: 172px;"></s->
+
+  </column->
+
+  <script>
+
+    customElements.define( 'job-', class Job_Element extends HTMLElement {
+      constructor () { super()
+
+        const shadow = this.shadow = this.attachShadow({ mode: 'open' })
+
+        shadow.innerHTML = `
+
+        <style>
+
+          :host {
+
+            width: 100%;
+            background: #BDCAD3;
+            border-radius: 16px;
+            padding: 20px;
+            gap: 8px;
+
+            display: grid; grid: 
+              'title  time' min-content
+              'author time' min-content
+              / auto min-content;
+
+          }
+
+        </style>
+        
+        <h1 style="grid-area: title; all:unset;
+        font-size: 16px; color: #000000;">Design Feedback</h1>
+        
+        <row- style="grid-area: author; place-self: end start;
+        display: flex; flex-flow: row nowrap;
+        align-items: center;">
+        
+          <avatar- style="
+          width: 16px; height: 16px;
+          border-radius: 8px;
+          background: center / cover no-repeat url(/img/chameleon.jpg);" ></avatar->
+
+          <s- style="width: 8px;" ></s->
+
+          <p style="all: unset; font-size: 12px; color: #000" >Davy Jones</p>
+        
+        </row->
+
+        <timer- style="grid-area: time; place-self: end;
+        height: min-content;
+        padding: 7px 7px; border-radius: 12px;
+        background: #2F3740; color: #E0E0E0; font-weight: bold;
+        display: flex;
+        align-items: center;">
+          <img alt="timer" style="margin-right: 4px; height: 1em; width: 1em; " src="svg/timer.svg"/>
+          2.0
+        </timer->
+
+        `
+
+      }
+
+      
+
+    } )
+
+    customElements.define( 'task-', class Task_Elemenet extends HTMLElement {
+      constructor () { super()
+      
+        const shadow = this.attachShadow({ mode: 'open' })
+
+        shadow.innerHTML = `
+        <style>
+        
+          :host {
+
+            padding: 18px 20px 18px 12px;
+            background: #DADBE3;
+            border-radius: 16px;
+
+          }
+
+          @media screen and (min-width: 428px ) { :host {
+        
+            height: 182px;
+        
+          } }
+      
+          @media screen and (max-width: 428px ) { :host {
+
+            height: 182px;
+
+          } } 
+
+          [name=title]::slotted(*) {
+
+            all: unset;
+            font-weight: 600;
+            font-size: 17px;
+
+          }
+        
+        </style>
+
+        <column- style="display: flex; flex-flow: column nowrap;">
+
+          <row- style="display: flex; flex-flow: row nowrap;">
+
+            <slot name=title></slot>
+
+            <s- style="flex-grow: 1;""></s->
+
+            <icon- style="
+            width: 24px; height: 24px; border-radius: 12px;
+            background: #2F3740; color: #E0E0E0;display: flex;align-items: center;justify-content: center;">5</icon->
+
+          </row->
+
+          <style>
+            task-item + task-item {
+
+              margin-top: 8px;
+
+            }
+          </style>
+
+          <s- style="height: 10px;" ></s->
+
+          <task-item></task-item>
+          <task-item></task-item>
+
+          <button- style="font-size: 14px; margin-top: 8px;" >+ more</button->
+        
+        </column->
+        `
+      }
+    } )
+
+    customElements.define( 'task-item', class extends HTMLElement {
+      constructor () { super()
+      
+        const shadow = this.attachShadow({ mode: 'open' })
+
+        shadow.innerHTML = `
+      
+          <style>
+          
+            :host {
+
+              padding: 4px 8px;
+              background: #CAD2DB;
+              border-radius: 12px;
+
+              display: flex; flex-flow: row nowrap;
+              align-items: center;
+
+            }
+            
+          </style>
+       
+          <marker- style="width: 8px; height: 8px; background: #74BFA8; border-radius: 50%;"></marker->
+
+          <s- style="width: 8px;" ></s->
+
+          <p style="all:unset; font-size: 14px; white-space: nowrap;">Design Feedback</p>
+
+        `
+      }
+
+
+    } )
+
+  </script>
+
+</body>
+</html>
+
